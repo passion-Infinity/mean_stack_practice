@@ -1,0 +1,27 @@
+header {
+    margin-bottom: 25px;
+
+    .header-group {
+        display: flex;
+    }
+
+    .logo {
+        width: 160px;
+        cursor: pointer;
+        img {
+            width: 100%;
+        }
+    }
+
+    .search,
+    .navigation,
+    .tool {
+        margin: auto;
+    }
+
+    .tool {
+        .pi {
+            margin-right: 10px;
+        }
+    }
+}

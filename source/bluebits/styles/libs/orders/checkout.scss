@@ -1,0 +1,39 @@
+.checkout-page {
+    min-height: 500px;
+
+    button {
+        background-color: $primary-color;
+        border: 0;
+    }
+
+    .checkout {
+        &-form {
+            margin-top: 25px;
+        }
+
+        &-button {
+            margin-top: 20px;
+            button {
+                width: 100%;
+            }
+        }
+    }
+
+    .thankyou-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 150px;
+
+        h2 {
+            margin: 0 0 20px 0;
+        }
+
+        .thankyou {
+            &-icon {
+                padding-bottom: 20px;
+            }
+        }
+    }
+}

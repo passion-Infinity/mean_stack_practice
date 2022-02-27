@@ -1,0 +1,59 @@
+<p-toast></p-toast>
+<div class="login-register">
+    <div class="login-register-panel">
+        <div class="grid">
+            <div class="col-6">
+                <img src="assets/images/login-photo.png" />
+            </div>
+            <div class="col-6 p-5">
+                <h3>Welcome!</h3>
+                <h2>Login Page</h2>
+                <form [formGroup]="loginFormGroup">
+                    <div class="grid">
+                        <div class="col-12" style="position: relative">
+                            <div class="p-inputgroup">
+                                <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                                <input
+                                    type="text"
+                                    formControlName="email"
+                                    pInputText
+                                    placeholder="Email"
+                                    [ngClass]="emailInput.touched ? (emailInput.valid ? 'valid' : 'invalid') : ''"
+                                />
+                                <i *ngIf="emailInput.valid && emailInput.touched" class="pi pi-check"></i>
+                                <i *ngIf="emailInput.invalid && emailInput.touched" class="pi pi-times"></i>
+                            </div>
+                            <small *ngIf="emailInput.invalid && isSubmitted" class="p-error">
+                                <span *ngIf="emailInput.errors.required">Email is required</span>
+                                <span *ngIf="emailInput.errors.email">Email is invalid</span>
+                            </small>
+                        </div>
+                        <div class="col-12" style="position: relative">
+                            <div class="p-inputgroup">
+                                <span class="p-inputgroup-addon"><i class="pi pi-lock"></i></span>
+                                <input
+                                    type="password"
+                                    formControlName="password"
+                                    pInputText
+                                    placeholder="Password"
+                                    [ngClass]="passwordInput.touched ? (passwordInput.valid ? 'valid' : 'invalid') : ''"
+                                />
+                            </div>
+                            <small *ngIf="passwordInput.invalid && isSubmitted" class="p-error"
+                                >Password is required</small
+                            >
+                            <i *ngIf="passwordInput.valid && passwordInput.touched" class="pi pi-check"></i>
+                            <i *ngIf="passwordInput.invalid && passwordInput.touched" class="pi pi-times"></i>
+                        </div>
+                        <div class="col-12">
+                            <p-button label="Submit" styleClass="full-btn" (click)="onSubmit()"></p-button>
+                        </div>
+                        <div class="col-12" *ngIf="isSubmitted && isLoginError">
+                            <small style="font-weight: 700" class="p-error">{{ errorMessage }}</small>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

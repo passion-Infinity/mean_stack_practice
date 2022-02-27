@@ -1,0 +1,47 @@
+.login-register {
+    background-image: linear-gradient(235deg, #565867, #191a25);
+    height: 100vh;
+    display: flex;
+    &-panel {
+        width: 650px;
+        height: 525px;
+        background-color: #fff;
+        margin: auto;
+
+        .full-btn {
+            width: 100%;
+        }
+
+        .valid {
+            border: 2px solid rgb(42, 212, 42);
+        }
+
+        .pi-check {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            border: 1px solid rgb(42, 212, 42);
+            background-color: rgb(42, 212, 42);
+            color: #fff;
+            border-radius: 50%;
+            right: 14px;
+            top: 15px;
+        }
+
+        .invalid {
+            border-color: red;
+        }
+
+        .pi-times {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            border: 1px solid red;
+            background-color: red;
+            color: #fff;
+            border-radius: 50%;
+            right: 14px;
+            top: 15px;
+        }
+    }
+}
